@@ -1,12 +1,15 @@
-package guru.springframework.spring5mongodbrecipeapp.converters;
+package guru.springframework.converters;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.UnitOfMeasureCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.UnitOfMeasure;
+import guru.springframework.commands.UnitOfMeasureCommand;
+import guru.springframework.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * Created by jt on 6/21/17.
+ */
 public class UnitOfMeasureToUnitOfMeasureCommandTest {
 
     public static final String DESCRIPTION = "description";

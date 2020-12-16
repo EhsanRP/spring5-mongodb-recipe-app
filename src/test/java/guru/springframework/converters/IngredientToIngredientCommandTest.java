@@ -1,9 +1,9 @@
-package guru.springframework.spring5mongodbrecipeapp.converters;
+package guru.springframework.converters;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.IngredientCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.Ingredient;
-import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
-import guru.springframework.spring5mongodbrecipeapp.domain.UnitOfMeasure;
+import guru.springframework.commands.IngredientCommand;
+import guru.springframework.domain.Ingredient;
+import guru.springframework.domain.Recipe;
+import guru.springframework.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +11,9 @@ import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
 
-
+/**
+ * Created by jt on 6/21/17.
+ */
 public class IngredientToIngredientCommandTest {
 
     public static final Recipe RECIPE = new Recipe();
@@ -43,7 +45,6 @@ public class IngredientToIngredientCommandTest {
         //given
         Ingredient ingredient = new Ingredient();
         ingredient.setId(ID_VALUE);
-        //ingredient.setRecipe(RECIPE);
         ingredient.setAmount(AMOUNT);
         ingredient.setDescription(DESCRIPTION);
         ingredient.setUom(null);
@@ -61,7 +62,6 @@ public class IngredientToIngredientCommandTest {
         //given
         Ingredient ingredient = new Ingredient();
         ingredient.setId(ID_VALUE);
-        //ingredient.setRecipe(RECIPE);
         ingredient.setAmount(AMOUNT);
         ingredient.setDescription(DESCRIPTION);
 

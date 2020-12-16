@@ -1,29 +1,48 @@
-package guru.springframework.spring5mongodbrecipeapp.repositories;
+package guru.springframework.repositories;
 
+import guru.springframework.spring5mongodbrecipeapp.bootstrap.RecipeBootstrap;
 import guru.springframework.spring5mongodbrecipeapp.domain.UnitOfMeasure;
+import guru.springframework.spring5mongodbrecipeapp.repositories.CategoryRepository;
+import guru.springframework.spring5mongodbrecipeapp.repositories.RecipeRepository;
+import guru.springframework.spring5mongodbrecipeapp.repositories.UnitOfMeasureRepository;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Created by jt on 6/17/17.
+ */
 
-@Ignore
 @RunWith(SpringRunner.class)
-@DataJpaTest
+@DataMongoTest
 public class UnitOfMeasureRepositoryIT {
 
     @Autowired
     UnitOfMeasureRepository unitOfMeasureRepository;
 
+    @Autowired
+    CategoryRepository categoryRepository;
+
+    @Autowired
+    RecipeRepository recipeRepository;
+
     @Before
     public void setUp() throws Exception {
+
+        recipeRepository.deleteAll();
+        unitOfMeasureRepository.deleteAll();
+        categoryRepository.deleteAll();
+
+        RecipeBootstrap recipeBootstrap = new RecipeBootstrap(categoryRepository, recipeRepository, unitOfMeasureRepository);
+
+        recipeBootstrap.onApplicationEvent(null);
     }
 
     @Test

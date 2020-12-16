@@ -1,14 +1,14 @@
-package guru.springframework.spring5mongodbrecipeapp.services;
+package guru.springframework.services;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.IngredientCommand;
-import guru.springframework.spring5mongodbrecipeapp.converters.IngredientCommandToIngredient;
-import guru.springframework.spring5mongodbrecipeapp.converters.IngredientToIngredientCommand;
-import guru.springframework.spring5mongodbrecipeapp.converters.UnitOfMeasureCommandToUnitOfMeasure;
-import guru.springframework.spring5mongodbrecipeapp.converters.UnitOfMeasureToUnitOfMeasureCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.Ingredient;
-import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
-import guru.springframework.spring5mongodbrecipeapp.repositories.RecipeRepository;
-import guru.springframework.spring5mongodbrecipeapp.repositories.UnitOfMeasureRepository;
+import guru.springframework.commands.IngredientCommand;
+import guru.springframework.converters.IngredientCommandToIngredient;
+import guru.springframework.converters.IngredientToIngredientCommand;
+import guru.springframework.converters.UnitOfMeasureCommandToUnitOfMeasure;
+import guru.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
+import guru.springframework.domain.Ingredient;
+import guru.springframework.domain.Recipe;
+import guru.springframework.repositories.RecipeRepository;
+import guru.springframework.repositories.UnitOfMeasureRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -78,7 +78,6 @@ public class IngredientServiceImplTest {
 
         //when
         assertEquals("3", ingredientCommand.getId());
-        assertEquals("1", ingredientCommand.getRecipeId());
         verify(recipeRepository, times(1)).findById(anyString());
     }
 
@@ -116,7 +115,6 @@ public class IngredientServiceImplTest {
         Ingredient ingredient = new Ingredient();
         ingredient.setId("3");
         recipe.addIngredient(ingredient);
-        //ingredient.setRecipe(recipe);
         Optional<Recipe> recipeOptional = Optional.of(recipe);
 
         when(recipeRepository.findById(anyString())).thenReturn(recipeOptional);

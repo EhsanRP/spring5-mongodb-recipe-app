@@ -1,6 +1,8 @@
-package guru.springframework.spring5mongodbrecipeapp.controllers;
+package guru.springframework.controllers;
 
 import guru.springframework.spring5mongodbrecipeapp.commands.RecipeCommand;
+import guru.springframework.spring5mongodbrecipeapp.controllers.ControllerExceptionHandler;
+import guru.springframework.spring5mongodbrecipeapp.controllers.RecipeController;
 import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
 import guru.springframework.spring5mongodbrecipeapp.exceptions.NotFoundException;
 import guru.springframework.spring5mongodbrecipeapp.services.RecipeService;

@@ -1,7 +1,7 @@
-package guru.springframework.spring5mongodbrecipeapp.services;
+package guru.springframework.services;
 
-import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
-import guru.springframework.spring5mongodbrecipeapp.repositories.RecipeRepository;
+import guru.springframework.domain.Recipe;
+import guru.springframework.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;

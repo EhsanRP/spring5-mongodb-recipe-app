@@ -1,7 +1,7 @@
-package guru.springframework.spring5mongodbrecipeapp.converters;
+package guru.springframework.converters;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.RecipeCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.*;
+import guru.springframework.commands.RecipeCommand;
+import guru.springframework.domain.*;
 import org.junit.Before;
 import org.junit.Test;
 

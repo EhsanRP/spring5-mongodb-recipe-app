@@ -3,6 +3,7 @@ package guru.springframework.spring5mongodbrecipeapp.commands;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.math.BigDecimal;
 

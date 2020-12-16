@@ -1,9 +1,9 @@
-package guru.springframework.spring5mongodbrecipeapp.converters;
+package guru.springframework.converters;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.IngredientCommand;
-import guru.springframework.spring5mongodbrecipeapp.commands.UnitOfMeasureCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.Ingredient;
-import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
+import guru.springframework.commands.IngredientCommand;
+import guru.springframework.commands.UnitOfMeasureCommand;
+import guru.springframework.domain.Ingredient;
+import guru.springframework.domain.Recipe;
 import org.junit.Before;
 import org.junit.Test;
 

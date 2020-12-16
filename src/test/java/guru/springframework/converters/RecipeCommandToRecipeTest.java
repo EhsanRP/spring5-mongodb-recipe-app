@@ -1,11 +1,11 @@
-package guru.springframework.spring5mongodbrecipeapp.converters;
+package guru.springframework.converters;
 
-import guru.springframework.spring5mongodbrecipeapp.commands.CategoryCommand;
-import guru.springframework.spring5mongodbrecipeapp.commands.IngredientCommand;
-import guru.springframework.spring5mongodbrecipeapp.commands.NotesCommand;
-import guru.springframework.spring5mongodbrecipeapp.commands.RecipeCommand;
-import guru.springframework.spring5mongodbrecipeapp.domain.Difficulty;
-import guru.springframework.spring5mongodbrecipeapp.domain.Recipe;
+import guru.springframework.commands.CategoryCommand;
+import guru.springframework.commands.IngredientCommand;
+import guru.springframework.commands.NotesCommand;
+import guru.springframework.commands.RecipeCommand;
+import guru.springframework.domain.Difficulty;
+import guru.springframework.domain.Recipe;
 import org.junit.Before;
 import org.junit.Test;
 
