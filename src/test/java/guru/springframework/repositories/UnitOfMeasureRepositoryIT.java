@@ -1,10 +1,7 @@
 package guru.springframework.repositories;
 
-import guru.springframework.spring5mongodbrecipeapp.bootstrap.RecipeBootstrap;
-import guru.springframework.spring5mongodbrecipeapp.domain.UnitOfMeasure;
-import guru.springframework.spring5mongodbrecipeapp.repositories.CategoryRepository;
-import guru.springframework.spring5mongodbrecipeapp.repositories.RecipeRepository;
-import guru.springframework.spring5mongodbrecipeapp.repositories.UnitOfMeasureRepository;
+import guru.springframework.bootstrap.RecipeBootstrap;
+import guru.springframework.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
