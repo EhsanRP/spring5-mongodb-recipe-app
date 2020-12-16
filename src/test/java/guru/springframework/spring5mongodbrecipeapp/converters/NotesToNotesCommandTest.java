@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/
+
 public class NotesToNotesCommandTest {
 
     public static final String ID_VALUE = "1";
