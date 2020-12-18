@@ -2,11 +2,10 @@ package guru.springframework.repositories;
 
 import guru.springframework.domain.UnitOfMeasure;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.Optional;
+import reactor.core.publisher.Flux;
 
 
 public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, String> {
 
-    Optional<UnitOfMeasure> findByDescription(String description);
+    Flux<UnitOfMeasure> findByDescription(String description);
 }
