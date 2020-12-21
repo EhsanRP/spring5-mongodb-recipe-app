@@ -40,8 +40,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
         //JUST IN CASE OF DIRTY CONTEXT
-        categoryRepository.deleteAll();
-        unitOfMeasureRepository.deleteAll();
+        //categoryRepository.deleteAll();
+        //recipeRepository.deleteAll();
+        //unitOfMeasureRepository.deleteAll();
 
         if (categoryRepository.count() == 0)
             loadCategories();
@@ -49,7 +50,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         if (unitOfMeasureRepository.count() == 0)
             loadUom();
 
-        recipeRepository.saveAll(getRecipes());
+        if (recipeRepository.count() == 0)
+            recipeRepository.saveAll(getRecipes());
+
         log.debug("Loading Bootstrap Data");
 
     }
